@@ -1,0 +1,18 @@
+
+    mudar a forma como o router busca por uma rota para dar match
+
+    hoje o router precisa retirar os argumentos da rota acessada e da rota pré-definida para dar o match
+        dessa forma é impossível ter rotas com variáveis entre as partes físicas
+        ex: Route::get('/user/{id}/children/{children_id}');
+
+    usando expressões regulares é possível criar um sistema de rotas onde a rota acima seja possível
+    manter o argumento de total de segmentos ou tamanho total da rota
+    adicionar um loop nas rotas pré-definidas que gere um padrão para expressões regulares e dê match na rota passada
+
+        Route::get('/user/{id}/children/{children_id}') viraria um pattern \/user/[a-z|A-Z|0-9]+/children/[a-z|A-Z|0-9]+\
+        para que assim a rota aceitasse qualquer parâmetro
+
+    
+    Criar uma classe Request que será o tipo do parâmetro enviado ao controller
+
+    Criar uma classe Response que será o tipo do dado retornado nas requests;

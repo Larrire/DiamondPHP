@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style>
+            *{
+                /* margin: 0; */
+                /* padding: 0; */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>{title}</h1>
+        <ul>
+            @foreach( users as key => user )
+                <div>
+                    <h2>{user[name]}</h2>
+                   
+                </div>
+                <hr>
+            @endforeach
+        </ul>
+    </body>
+</html>

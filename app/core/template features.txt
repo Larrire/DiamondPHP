@@ -1,0 +1,43 @@
+
+{user}                      => 'echo $dados["user"];'
+{user[name]}                => 'echo $dados["user"]["name"];'
+
+@foreach(tarefas as tarefa) => '
+    $tarefas = $dados["tarefas"];
+    foreach($tarefas as key => $tarefa){'
+
+    {tarefa[titulo]} => {tarefas[key][titulo]} =>'echo $this->values["tarefas"][key]["titulo"]'
+
+@endforeach => '}'
+
+    // $string = 'foreach($dados["users"] as $user){
+    //     echo $user["name"] .":". "<br>";
+    //     foreach($user["emails"] as $email){
+    //         echo $email . "<br>";
+    //     }
+    //     echo "<hr>";
+    // }';
+
+    // eval($string);
+
+
+$tarefas = [
+    [
+        'title' => 'tarefa 1'
+    ],
+    [
+        'title' => 'tarefa 2'
+    ]
+]
+
+@foreach(tarefas as key => tarefa)
+    {tarefa[title]}
+@endforeach
+            v
+@foreach(tarefas as key => tarefa)
+    {tarefas[key][title]}
+@endforeach
+            v
+foreach($tarefas as $key => $tarefa){
+    echo $this->values["tarefas"][key]["title"]
+}

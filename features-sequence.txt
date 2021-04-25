@@ -1,0 +1,13 @@
+
+    1 - Finalizar sistema de template:
+        - Implementar nova forma de converter o sistema, baseada em "traduzir" o template para PHP:
+            - IF ... ELSEIF ... ELSE
+            - FOREACH
+            - {{$variable}}
+
+    2 - Melhorar o Router para que possam ter argumentos intercalando trexos fixos:
+        - Ex: Router::get('/user/{id}/children/{children_id}', ...);
+
+    3 - Criar ORM que aceita classe de DB como argumento e classe MySQL para ser o primeiro banco suportado pelo framework
+
+    4 - Implementar Boas práticas de segurança

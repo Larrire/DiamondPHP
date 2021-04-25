@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+
+   RewriteEngine On
+
+   # RewriteCond %{REQUEST_FILENAME}  -f [OR]
+   # RewriteCond %{REQUEST_FILENAME} !-f
+   # RewriteRule ^(.*)$ index.php [L,QSA]
+
+   # Redirecionar todas as requisições para o arquivo index.php na raíz, passando a url como parâmetro url
+   RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+
+</IfModule>

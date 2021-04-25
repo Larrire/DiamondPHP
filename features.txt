@@ -1,0 +1,26 @@
+
+melhorar o Router:
+    - Adicionar a opção de enviar parâmetros entre elementos fixos.
+        Ex Route::get('user/{id}/info/{info-type}');
+    - Melhorar o router para aceitar a rota "/"
+
+Melhorar o sistema de template:
+    - Implementar os comandos:
+        IF, FOREACH, FOR, SESSION, VAR_DUMP, DATE, 
+    
+    - Implementar a opção de passar arrays
+    - Implementar a opção de incluir outros arquivos de template
+
+Criar uma classe para a manipulação de Banco de dados, que receberá uma instância de um banco de dados definida pelo usuário:
+    Ex: $config['database'] = 'Mysql'; ou $config['database'] = 'PostgreeSQL';
+        $db_type = new $config['database'];
+        $db = new DB($db_type);
+
+Implementar boas práticas de segurança
+    - Alterar nome da sessão
+    - Adicionar script de criptografia pronto para uso
+    - Usar uma classe Request para pegar os inputs usando métodos com segurança implementada
+    - Usar uma classe para manipular cookies
+
+Criar uma classe Request para ser enviada aos controllers
+
